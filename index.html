@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/foter.css">
 </head>
 
 <body>
@@ -68,11 +69,449 @@
         </nav>
     </header>
     <main id="top">
-        <section id="skills"></section>
-        <section id="projects"></section>
-        <section id="qualification"></section>
-        <section id="contacts"></section>
+        <section class="hero" id="top">
+        <div class="hero__container">
+
+            <!-- Текстовая часть -->
+            <div class="hero__content">
+                <p class="hero__eyebrow">
+                    ПРИВЕТ, Я ИРИНА 👋
+                </p>
+
+                <h1 class="hero__title">
+                    UI/UX дизайнер
+                    <span>
+                        который превращает<br class="hero__desktop-break">
+                        идеи в удобные продукты
+                    </span>
+                </h1>
+
+                <p class="hero__description">
+                    Продумываю логику, создаю понятные интерфейсы
+                    и помогаю бизнесу достигать целей через дизайн.
+                </p>
+
+                <div class="hero__actions">
+                    <a class="hero__button hero__button--primary" href="#projects">
+                        Смотреть проекты
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a class="hero__button hero__button--secondary" href="assets/resume.pdf" download>
+                        Смотреть резюме
+                        <span aria-hidden="true">↧</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Фотография -->
+            <div class="hero__visual">
+                <img class="hero__photo" src="assets/img/portrait.png" alt="Портрет Ирины" width="386" height="337"
+                    fetchpriority="high">
+            </div>
+
+            <!-- Карточки -->
+            <div class="hero__info">
+
+                <div class="hero__info-card">
+                    <span class="hero__info-icon" aria-hidden="true">⌖</span>
+                    <div>
+                        <p class="hero__info-label">Локация</p>
+                        <p class="hero__info-value">Нижний Новгород, Россия</p>
+                    </div>
+                </div>
+
+                <div class="hero__info-card">
+                    <span class="hero__info-icon" aria-hidden="true">◇</span>
+                    <div>
+                        <p class="hero__info-label">Образование</p>
+                        <p class="hero__info-value">
+                            UI/UX дизайнер
+                            <small>диплом гос. образца</small>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hero__info-card">
+                    <span class="hero__info-icon" aria-hidden="true">★</span>
+                    <div>
+                        <p class="hero__info-label">Опыт</p>
+                        <p class="hero__info-value">2+ года</p>
+                    </div>
+                </div>
+
+                <div class="hero__info-card">
+                    <span class="hero__info-icon" aria-hidden="true">♥</span>
+                    <div>
+                        <p class="hero__info-label">Специализация</p>
+                        <p class="hero__info-value">UI/UX, Веб-дизайн</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="tools" id="skills">
+        <div class="tools__container">
+
+            <div class="tools__heading">
+                <p class="tools__eyebrow">
+                    <span>02</span> / Навыки
+                </p>
+
+                <h2 class="tools__title">
+                    Стэк технологий
+                </h2>
+            </div>
+
+            <div class="tools__grid">
+
+                <div class="tools__card">
+                    <img src="assets/img/figma.svg" alt="" width="40" height="40">
+                    <span>Figma</span>
+                </div>
+
+                <div class="tools__card">
+                    <img src="assets/img/photoshop.svg" alt="" width="40" height="40">
+                    <span>Photoshop</span>
+                </div>
+
+                <div class="tools__card">
+                    <img src="assets/img/illustrator.svg" alt="" width="40" height="40">
+                    <span>Illustrator</span>
+                </div>
+
+                <div class="tools__card">
+                    <img src="assets/img/coreldraw.svg" alt="" width="40" height="40">
+                    <span>CorelDraw</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="projects__container">
+
+            <div class="projects__heading">
+                <div>
+                    <p class="projects__eyebrow">
+                        <span>03</span> / Проекты
+                    </p>
+                    <h2 class="projects__title">Мои проекты</h2>
+                </div>
+
+                <a href="projects/index.html" class="projects__all">
+                    Смотреть все проекты
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="projects__grid">
+
+                <!-- 1. Завод -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-factory.webp"
+                        alt="Превью сайта промышленного завода" loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Промышленный завод</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/factory.html" class="project-card__link"
+                                aria-label="Открыть проект Промышленный завод">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. AngryAnimal -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-angry.webp"
+                        alt="Превью дизайна AngryAnimal" loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">AngryAnimal</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/angry-animal.html" class="project-card__link"
+                                aria-label="Открыть проект AngryAnimal">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Завод -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-factory.webp"
+                        alt="Превью промышленного сайта" loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Промышленный завод</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/factory.html" class="project-card__link"
+                                aria-label="Открыть проект промышленного завода">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Образовательный проект -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-education.webp"
+                        alt="Превью образовательного лендинга" loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">Образовательный проект</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/education.html" class="project-card__link"
+                                aria-label="Открыть образовательный проект">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. AngryAnimal -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-angry.webp" alt="Превью AngryAnimal"
+                        loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">AngryAnimal</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/angry-animal.html" class="project-card__link"
+                                aria-label="Открыть проект AngryAnimal">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. AngryAnimal -->
+                <article class="project-card">
+                    <img class="project-card__image" src="assets/img/project-angry.webp" alt="Превью AngryAnimal"
+                        loading="lazy" width="600" height="320">
+                    <div class="project-card__body">
+                        <h3 class="project-card__title">AngryAnimal</h3>
+                        <div class="project-card__bottom">
+                            <div class="project-card__tags">
+                                <span>Landing page</span>
+                                <span>UI Design</span>
+                            </div>
+                            <a href="projects/angry-animal.html" class="project-card__link"
+                                aria-label="Открыть проект AngryAnimal">
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <section class="experience" id="qualification">
+        <div class="experience__container">
+            <div class="experience__heading">
+                <p class="experience__eyebrow">
+                    <span>04</span> / Квалификация
+                </p>
+                <h2 class="experience__title">Опыт и образование</h2>
+            </div>
+
+            <div class="experience__timeline">
+
+                <!-- 1 -->
+                <div class="experience-item">
+                    <div class="experience-item__year">2025</div>
+
+                    <article class="experience-card">
+                        <div class="experience-card__icon">
+                            <img src="assets/img/kotologika-logo.webp" alt="Логотип Котологика" width="56" height="56">
+                        </div>
+
+                        <div class="experience-card__content">
+                            <h3 class="experience-card__title">ООО "Котологика"</h3>
+                            <p class="experience-card__text">
+                                Разработка графических материалов
+                                и выполнение дизайн-задач внутри компании
+                            </p>
+                        </div>
+
+                        <div class="experience-card__actions">
+                            <span class="experience-card__chip">
+                                Дополнительные задачи
+                            </span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2 -->
+                <div class="experience-item">
+                    <div class="experience-item__year">2026</div>
+
+                    <article class="experience-card">
+                        <div class="experience-card__icon experience-card__icon--outline">
+                            <img src="assets/img/diploma-icon.svg" alt="" width="40" height="40">
+                        </div>
+
+                        <div class="experience-card__content">
+                            <h3 class="experience-card__title">Диплом</h3>
+                            <p class="experience-card__text">
+                                Получила диплом квалифицированного
+                                специалиста по UI/UX дизайну
+                            </p>
+                        </div>
+
+                        <div class="experience-card__actions">
+                            <a href="assets/diploma.pdf" class="experience-card__button" target="_blank" rel="noopener">
+                                Посмотреть диплом
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 3 -->
+                <div class="experience-item experience-item--active">
+                    <div class="experience-item__year">2026</div>
+
+                    <article class="experience-card">
+                        <div class="experience-card__icon experience-card__icon--outline">
+                            <div class="experience-card__logo-text">
+                                Aweb<br>Systems
+                            </div>
+                        </div>
+
+                        <div class="experience-card__content">
+                            <h3 class="experience-card__title">Aweb Systems</h3>
+                            <p class="experience-card__text">
+                                Дизайнер. Разработка веб-сайтов,
+                                баннеров и графических элементов интерфейсов
+                            </p>
+                        </div>
+
+                        <div class="experience-card__actions experience-card__actions--tags">
+                            <span class="experience-card__chip">Веб-дизайн</span>
+                            <span class="experience-card__chip">Баннеры</span>
+                            <span class="experience-card__chip">Иконки</span>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="contacts__container">
+            <div class="contacts__heading">
+                <p class="contacts__eyebrow">
+                    <span>05</span> / Контакты
+                </p>
+                <h2 class="contacts__title">Давайте свяжемся</h2>
+            </div>
+
+            <div class="contacts__grid">
+
+                <a class="contact-card" href="https://linkedin.com/in/myusername" target="_blank" rel="noopener">
+                    <div class="contact-card__icon">
+                        <img src="assets/img/linkedin.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="contact-card__content">
+                        <span class="contact-card__label">LinkedIn</span>
+                        <span class="contact-card__value">@myusername</span>
+                    </div>
+                </a>
+
+                <a class="contact-card" href="https://t.me/myusername" target="_blank" rel="noopener">
+                    <div class="contact-card__icon">
+                        <img src="assets/img/telegram.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="contact-card__content">
+                        <span class="contact-card__label">Telegram</span>
+                        <span class="contact-card__value">@myusername</span>
+                    </div>
+                </a>
+
+                <a class="contact-card" href="https://dribbble.com/myusername" target="_blank" rel="noopener">
+                    <div class="contact-card__icon">
+                        <img src="assets/img/dribbble.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="contact-card__content">
+                        <span class="contact-card__label">Dribbble</span>
+                        <span class="contact-card__value">@myusername</span>
+                    </div>
+                </a>
+
+                <a class="contact-card" href="mailto:hello@example.com">
+                    <div class="contact-card__icon">
+                        <img src="assets/img/email.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="contact-card__content">
+                        <span class="contact-card__label">Email</span>
+                        <span class="contact-card__value">@myusername</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     </main>
+
+
+    
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__top">
+
+                <!-- Логотип -->
+                <a href="#top" class="footer__logo">
+                    <span class="footer__logo-name">/artistClay</span>
+                    <span class="footer__logo-description">UI/UX дизайнер</span>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="footer__nav" aria-label="Навигация в футере">
+                    <a href="#skills">Навыки</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#qualification">Квалификация</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 artistClay. Все права защищены
+                </p>
+
+                <p class="footer__credit">
+                    Создано с вниманием к деталям
+                    <span aria-hidden="true">✦</span>
+                </p>
+            </div>
+
+        </div>
+    </footer>
 
     <a href="./projects/start_drive.html">start drive</a>
     <script src="./index.js"></script>

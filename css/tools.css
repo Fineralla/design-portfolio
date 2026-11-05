@@ -1,0 +1,156 @@
+
+/* ==================================
+   TOOLS — MOBILE FIRST
+================================== */
+
+.tools {
+  position: relative;
+  padding: 40px 8px 48px;
+  background: var(--bg);
+}
+
+.tools__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.tools__heading {
+  margin-bottom: 24px;
+}
+
+.tools__eyebrow {
+  margin: 0 0 8px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.tools__eyebrow span {
+  color: #6862ff;
+}
+
+.tools__title {
+  margin: 0;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* CARDS */
+
+.tools__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.tools__card {
+  min-width: 0;
+  min-height: 60px;
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid #3b36a5;
+  border-radius: 14px;
+
+  background: #101118;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tools__card img {
+  display: block;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tools__card:hover {
+  border-color: #6862ff;
+  box-shadow: 0 0 18px rgba(104, 98, 255, 0.13);
+  transform: translateY(-2px);
+}
+
+/* TABLET */
+
+@media (min-width: 600px) {
+  .tools {
+    padding: 64px 32px;
+  }
+
+  .tools__title {
+    font-size: 28px;
+  }
+
+  .tools__grid {
+    gap: 12px;
+  }
+
+  .tools__card {
+    min-height: 72px;
+    font-size: 15px;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 960px) {
+  .tools {
+    padding: 80px 24px;
+  }
+
+  .tools__heading {
+    margin-bottom: 42px;
+  }
+
+  .tools__eyebrow {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .tools__title {
+    font-size: 34px;
+  }
+
+  .tools__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .tools__card {
+    min-height: 82px;
+    padding: 14px 18px;
+    gap: 18px;
+
+    font-size: 17px;
+    border-radius: 18px;
+  }
+
+  .tools__card img {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .tools__card {
+    transition: none;
+  }
+}

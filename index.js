@@ -1,44 +1,54 @@
-// header
 const header = document.querySelector('.header');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
-mobileMenu.inert = true;
 
 if (header && menuToggle && mobileMenu) {
-    function setMenuOpen(open) {
-        header.classList.toggle('is-open', open);
-        function setMenuOpen(isOpen) {
-            header.classList.toggle("is-open", isOpen);
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
+  // Открытие и закрытие меню
+  function setMenuOpen(isOpen) {
+    header.classList.toggle('is-open', isOpen);
 
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Закрыть меню" : "Открыть меню"
-            );
+    menuToggle.setAttribute(
+      'aria-expanded',
+      String(isOpen)
+    );
 
-            mobileMenu.inert = !isOpen;
-        }
-        menuToggle.setAttribute('aria-expanded', String(open));
-        menuToggle.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    menuToggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Закрыть меню' : 'Открыть меню'
+    );
+
+    // Разрешаем взаимодействие только с открытым меню
+    mobileMenu.inert = !isOpen;
+  }
+
+  // Начальное состояние
+  setMenuOpen(false);
+
+  // Клик по бургеру
+  menuToggle.addEventListener('click', () => {
+    const isOpen = header.classList.contains('is-open');
+    setMenuOpen(!isOpen);
+  });
+
+  // Клик по ссылкам навигации
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      setMenuOpen(false);
+    });
+  });
+
+  // Закрытие по Escape
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setMenuOpen(false);
     }
+  });
 
-    menuToggle.addEventListener('click', () => {
-        setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => setMenuOpen(false));
-    });
-
-    document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') setMenuOpen(false);
-    });
-
-    document.addEventListener('click', event => {
-        if (!header.contains(event.target)) setMenuOpen(false);
-    });
+  // Закрытие при клике вне меню
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
 }
