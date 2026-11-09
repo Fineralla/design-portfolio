@@ -5,7 +5,10 @@
   --text-secondary: #a3a4ad;
   --border: #30313e;
   --green: #55e58b;
+  --container-width: 1440px;
+  --page-padding: 16px;
 }
+
 
 * {
   box-sizing: border-box;
@@ -19,5 +22,18 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Единые внешние отступы сайта: меняются в одном месте. */
+@media (min-width: 600px) {
+  :root {
+    --page-padding: 32px;
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --page-padding: 24px;
+  }
 }

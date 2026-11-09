@@ -1,11 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+  <html lang="ru">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    stratdrive
+
+    <title>СтартДрайв — проект artistClay</title>
+    <meta name="description" content="Кейс СтартДрайв — дизайн лендинга для автошколы.">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/project.css">
+
+    <script src="../index.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-inner">
+
+        <a class="logo" href="../index.html">
+          <span class="logo-name">/artistClay</span>
+          <span class="logo-description">UI/UX дизайнер</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="../index.html#skills">Навыки</a>
+          <a href="../index.html#projects">Проекты</a>
+          <a href="../index.html#contacts">Контакты</a>
+        </nav>
+
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="mobile-menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация">
+        <div class="mobile-menu-content">
+          <ul class="menu-links">
+            <li><a href="../index.html#skills">Навыки</a></li>
+            <li><a href="../index.html#projects">Проекты</a></li>
+            <li><a href="../index.html#qualification">Квалификация</a></li>
+            <li><a href="../index.html#contacts">Контакты</a></li>
+          </ul>
+
+          <div class="menu-footer">
+            <span class="status-dot"></span>
+            <span>Открыта к предложениям</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="case-page">
+
+      <!-- PROJECT HERO -->
+      <section class="case-hero">
+        <div class="case-container case-hero__grid">
+
+          <div class="case-hero__content">
+
+            <a href="../index.html#projects" class="case-back">
+              <span aria-hidden="true">←</span>
+              Все проекты
+            </a>
+
+            <h1 class="case-hero__title">СтартДрайв</h1>
+
+            <p class="case-hero__subtitle">
+              Landing page для автошколы
+            </p>
+
+            <p class="case-hero__description">
+              Современный и удобный лендинг,
+              который помогает будущим водителям
+              быстро узнать о курсах и записаться
+              на обучение.
+            </p>
+
+            <div class="case-tags">
+              <span>UI Design</span>
+              <span>Landing page</span>
+            </div>
+
+            <ul class="case-facts">
+              <li>
+                <span class="case-facts__icon" aria-hidden="true">▣</span>
+                <span><strong>Срок:</strong> 3 дня</span>
+              </li>
+
+              <li>
+                <span class="case-facts__icon" aria-hidden="true">◎</span>
+                <span><strong>Цель:</strong> увеличение записей</span>
+              </li>
+
+              <li>
+                <span class="case-facts__icon" aria-hidden="true">♧</span>
+                <span><strong>Аудитория:</strong> будущие водители</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Готовый мокап с прозрачностью -->
+          <div class="case-hero__visual">
+            <img src="../assets/img/startdrive-mockup.webp" alt="Дизайн СтартДрайв на ноутбуке" width="900" height="700"
+              fetchpriority="high">
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section class="case-results">
+        <div class="case-container">
+
+          <h2 class="case-results__title">Результат</h2>
+
+          <div class="case-results__grid">
+
+            <figure class="case-results__item">
+              <img src="../assets/img/startdrive-hero.webp" alt="Главный экран сайта СтартДрайв" loading="lazy"
+                width="800" height="540">
+            </figure>
+
+            <figure class="case-results__item">
+              <img src="../assets/img/startdrive-stats.webp" alt="Блок преимуществ автошколы" loading="lazy" width="800"
+                height="540">
+            </figure>
+
+            <figure class="case-results__item">
+              <img src="../assets/img/startdrive-instructors.webp" alt="Блок профессиональных инструкторов"
+                loading="lazy" width="800" height="540">
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="case-summary">
+        <div class="case-container">
+
+          <div class="case-summary__card">
+            <div class="case-summary__heading">
+              <span class="case-summary__icon" aria-hidden="true">✦</span>
+              <h2>Итог</h2>
+            </div>
+
+            <p>
+              Чистый, структурный и доверительный дизайн,
+              который решает задачи бизнеса.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BACK LINK -->
+      <!-- <div class="case-container case-end">
+      <a href="../index.html#projects">← Вернуться к проектам</a>
+    </div> -->
+
+    </main>
+
+  </body>
+
+  </html>
+
 </body>
+
 </html>

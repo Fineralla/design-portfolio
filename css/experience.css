@@ -4,7 +4,7 @@
 
 .experience {
     position: relative;
-    padding: 48px 16px 56px;
+    padding: 48px var(--page-padding) 56px;
     background:
         radial-gradient(ellipse at 0% 55%,
             rgba(98, 92, 255, 0.08),
@@ -188,7 +188,7 @@
 
 @media (min-width: 600px) {
     .experience {
-        padding: 64px 32px;
+        padding: 64px var(--page-padding);
     }
 
     .experience__title {
@@ -224,7 +224,7 @@
 
 @media (min-width: 1024px) {
     .experience {
-        padding: 80px 24px 96px;
+        padding: 80px var(--page-padding) 96px;
     }
 
     .experience__heading {

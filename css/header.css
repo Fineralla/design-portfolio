@@ -17,7 +17,7 @@
   align-items: center;
   min-height: 54px;
   width: 100%;
-  padding: 8px 20px;
+  padding: 8px calc(var(--page-padding) - 8px);
 }
 
 .logo {
@@ -27,8 +27,20 @@
   color: var(--text);
   text-decoration: none;
 }
-.logo-name { font-size: 16px; font-weight: 700; line-height: 1; }
-.logo-description { font-size: 11px; line-height: 1.2; color: var(--text-secondary); }
+
+.logo-name {
+  /* font-size: 16px; */
+  font-size: clamp(0.8125rem, 0.6161rem + 0.9821vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo-description {
+  /* font-size: 11px; */
+  font-size: clamp(0.5625rem, 0.4375rem + 0.625vw, 1rem);
+  line-height: 1.2;
+  color: var(--text-secondary);
+}
 
 .menu-toggle {
   width: 32px;
@@ -58,7 +70,10 @@
     opacity 0.2s ease,
     background-color 0.3s ease;
 }
-.menu-toggle:focus-visible, .menu-links a:focus-visible, .logo:focus-visible {
+
+.menu-toggle:focus-visible,
+.menu-links a:focus-visible,
+.logo:focus-visible {
   outline: 2px solid var(--green);
   outline-offset: 4px;
 }
@@ -74,14 +89,33 @@
   background: linear-gradient(135deg, #161827, #10111b);
   border: 1px solid var(--border);
   border-radius: 24px;
-  box-shadow: 0 14px 36px rgba(0,0,0,.35);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, .35);
 }
-.mobile-menu[hidden] { display: none; }
-.header.is-open { background: transparent; border-color: transparent; }
-.header.is-open .menu-toggle span { background: var(--text); }
-.header.is-open .menu-toggle span:first-child { transform: translateY(8.5px) rotate(45deg); }
-.header.is-open .menu-toggle span:nth-child(2) { opacity: 0; }
-.header.is-open .menu-toggle span:last-child { transform: translateY(-8.5px) rotate(-45deg); }
+
+.mobile-menu[hidden] {
+  display: none;
+}
+
+.header.is-open {
+  background: transparent;
+  border-color: transparent;
+}
+
+.header.is-open .menu-toggle span {
+  background: var(--text);
+}
+
+.header.is-open .menu-toggle span:first-child {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.header.is-open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.is-open .menu-toggle span:last-child {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
 
 .menu-links {
   display: flex;
@@ -91,6 +125,7 @@
   padding: 0;
   list-style: none;
 }
+
 .menu-links a {
   color: var(--text);
   text-decoration: none;
@@ -99,7 +134,12 @@
   line-height: 1.3;
   transition: color .2s ease;
 }
-.menu-links a:hover { color: var(--text-secondary); }
+
+.menu-links a:hover {
+  /* color: var(--text-secondary); */
+  color: #6060FD;
+}
+
 .menu-footer {
   border-top: 1px solid var(--border);
   padding-top: 22px;
@@ -109,6 +149,7 @@
   font-size: 13px;
   color: var(--text);
 }
+
 .status-dot {
   display: inline-block;
   flex-shrink: 0;
@@ -116,7 +157,7 @@
   height: 11px;
   background: var(--green);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(85,229,139,.2);
+  box-shadow: 0 0 10px rgba(85, 229, 139, .2);
 }
 
 /* Плавное раскрытие меню */
@@ -210,9 +251,15 @@
     transition: none;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .menu-toggle span, .menu-links a { transition: none; }
+
+  .menu-toggle span,
+  .menu-links a {
+    transition: none;
+  }
 }
+
 /* ==================================
    DESKTOP HEADER
 ================================== */
@@ -243,8 +290,11 @@
     align-items: center;
 
     width: 100%;
+    max-width: calc(var(--container-width) + 2 * var(--page-padding));
     min-height: 64px;
-    padding: 12px 24px;
+
+    margin-inline: auto;
+    padding-inline: var(--page-padding);
     gap: 24px;
   }
 
@@ -254,13 +304,14 @@
     justify-self: start;
   }
 
+  /* 
   .logo-name {
     font-size: 16px;
-  }
-
+  } */
+/* 
   .logo-description {
     font-size: 11px;
-  }
+  } */
 
   /* Навигация */
 
@@ -274,7 +325,8 @@
   .desktop-nav a {
     color: var(--text);
     text-decoration: none;
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
     font-weight: 400;
     white-space: nowrap;
 
@@ -282,7 +334,8 @@
   }
 
   .desktop-nav a:hover {
-    color: var(--text-secondary);
+    /* color: var(--text-secondary); */
+      color: #6060FD;
   }
 
   /* Статус */
@@ -293,7 +346,8 @@
     justify-self: end;
     gap: 10px;
 
-    font-size: 12px;
+    /* font-size: 12px; */
+    font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
     color: var(--text);
     white-space: nowrap;
   }

@@ -5,7 +5,7 @@
 
 .footer {
   position: relative;
-  padding: 0 16px 36px;
+  padding: 0 var(--page-padding) 36px;
 
   background:
     var(--bg);
@@ -110,7 +110,7 @@
 
 @media (min-width: 600px) {
   .footer {
-    padding: 0 32px 48px;
+    padding: 0 var(--page-padding) 48px;
   }
 
   .footer__container {
@@ -136,7 +136,7 @@
 
 @media (min-width: 960px) {
   .footer {
-    padding: 0 24px 52px;
+    padding: 0 var(--page-padding) 52px;
   }
 
   .footer__container {
