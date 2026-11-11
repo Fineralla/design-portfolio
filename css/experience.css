@@ -28,7 +28,8 @@
 .experience__eyebrow {
     margin: 0 0 10px;
     color: var(--text-secondary);
-    font-size: 11px;
+    font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+    /* font-size: 11px; */
     line-height: 1.4;
 }
 
@@ -39,7 +40,8 @@
 .experience__title {
     margin: 0;
     color: var(--text);
-    font-size: 22px;
+    font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+    /* font-size: 22px; */
     font-weight: 600;
     line-height: 1.2;
 }
@@ -126,7 +128,8 @@
 .experience-card__title {
     margin: 0 0 8px;
     color: var(--text);
-    font-size: 13px;
+    /* font-size: 13px; */
+    font-size: clamp(0.625rem, 0.4886rem + 0.6818vw, 1rem);
     font-weight: 600;
     line-height: 1.3;
 }
@@ -134,7 +137,8 @@
 .experience-card__text {
     margin: 0;
     color: var(--text-secondary);
-    font-size: 11px;
+    /* font-size: 11px; */
+    font-size: clamp(0.5rem, 0.3636rem + 0.6818vw, 0.875rem);
     line-height: 1.45;
 }
 
@@ -184,6 +188,7 @@
     border-color: #7c76ff;
 }
 
+
 /* TABLET */
 
 @media (min-width: 600px) {
@@ -191,9 +196,9 @@
         padding: 64px var(--page-padding);
     }
 
-    .experience__title {
+    /* .experience__title {
         font-size: 28px;
-    }
+    } */
 
     .experience-card {
         grid-template-columns: 64px minmax(0, 1fr);
@@ -206,13 +211,13 @@
         height: 64px;
     }
 
-    .experience-card__title {
+    /* .experience-card__title {
         font-size: 14px;
-    }
+    } */
 
-    .experience-card__text {
+    /* .experience-card__text {
         font-size: 12px;
-    }
+    } */
 
     .experience-card__chip,
     .experience-card__button {
@@ -233,12 +238,12 @@
 
     .experience__eyebrow {
         margin-bottom: 16px;
-        font-size: 14px;
+        /* font-size: 14px; */
     }
 
-    .experience__title {
+    /* .experience__title {
         font-size: 34px;
-    }
+    } */
 
     .experience__timeline {
         position: relative;
@@ -314,7 +319,7 @@
     .experience-card {
         grid-template-columns: 64px minmax(0, 1fr) auto;
         align-items: center;
-        gap: 18px;
+        gap: 24px;
 
         min-height: 90px;
         padding: 18px 20px;
@@ -336,13 +341,13 @@
     }
 
     .experience-card__title {
-        font-size: 15px;
+        /* font-size: 15px; */
         margin-bottom: 6px;
     }
 
     .experience-card__text {
         max-width: 380px;
-        font-size: 12px;
+        /* font-size: 12px; */
     }
 
     .experience-card__chip,

@@ -363,6 +363,10 @@
     display: none;
   }
 
+  .header {
+    padding: 12px 0;
+  }
+
   .header .mobile-menu {
     display: none;
   }

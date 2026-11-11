@@ -34,7 +34,8 @@
 .projects__eyebrow {
   margin: 0 0 10px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  /* font-size: 11px; */
   line-height: 1.4;
 }
 
@@ -45,7 +46,8 @@
 .projects__title {
   margin: 0;
   color: var(--text);
-  font-size: 22px;
+  font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  /* font-size: 22px; */
   font-weight: 600;
   line-height: 1.25;
 }
@@ -122,6 +124,7 @@
 .project-card:hover {
   border-color: #514bca;
   transform: translateY(-3px);
+ background-color: #181923;
 }
 
 /* IMAGE */
@@ -226,9 +229,9 @@
     padding: 64px var(--page-padding);
   }
 
-  .projects__title {
+  /* .projects__title {
     font-size: 28px;
-  }
+  } */
 
   .projects__all {
     font-size: 11px;
@@ -264,12 +267,12 @@
 
   .projects__eyebrow {
     margin-bottom: 20px;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
-  .projects__title {
+  /* .projects__title {
     font-size: 34px;
-  }
+  } */
 
   .projects__all {
     padding: 11px 18px;

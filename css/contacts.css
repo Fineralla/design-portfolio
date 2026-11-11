@@ -20,7 +20,8 @@
 .contacts__eyebrow {
   margin: 0 0 10px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  /* font-size: 11px; */
   line-height: 1.4;
 }
 
@@ -31,7 +32,8 @@
 .contacts__title {
   margin: 0;
   color: var(--text);
-  font-size: 22px;
+  font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  /* font-size: 22px; */
   font-weight: 600;
   line-height: 1.2;
 }
@@ -72,23 +74,44 @@
 }
 
 .contact-card__icon {
-  flex: 0 0 42px;
+    flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
 
-  width: 42px;
-  height: 42px;
+  display: grid;
+  place-items: center;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background:
+    linear-gradient(
+      #161821,
+      #161821
+    ) padding-box,
+
+    linear-gradient(
+      45deg,
+      rgba(42, 41, 137, 0) 0%,
+      #4A47EF 100%
+    ) border-box;
+  /* flex: 0 0 32px;
+
+  width: 32px;
+  height: 32px;
 
   display: grid;
   place-items: center;
 
   border: 1px solid #3f3ab7;
-  border-radius: 10px;
-  background: #161821;
+  border-radius: 4px;
+  background: #161821; */
 }
 
 .contact-card__icon img {
   display: block;
-  width: 24px;
-  height: 24px;
+width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
@@ -104,14 +127,16 @@
 
 .contact-card__label {
   color: var(--text);
-  font-size: 15px;
+  font-size: clamp(0.625rem, 0.4886rem + 0.6818vw, 1rem);
+  /* font-size: 15px; */
   font-weight: 500;
   line-height: 1.2;
 }
 
 .contact-card__value {
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: clamp(0.625rem, 0.4886rem + 0.6818vw, 1rem);
+  /* font-size: 14px; */
   line-height: 1.2;
   text-align: right;
   white-space: nowrap;
@@ -129,9 +154,22 @@
   }
 
   .contact-card {
+    gap: 24px;
     min-height: 78px;
     padding: 16px 18px;
   }
+
+    .contact-card__icon {
+  flex: 0 0 48px;
+        border-radius: 12px;
+  width: 48px;
+  height: 48px;
+}
+
+.contact-card__icon img {
+  width: 24px;
+  height: 24px;
+}
 }
 
 /* DESKTOP */
@@ -142,12 +180,12 @@
   }
 
   .contacts__heading {
-    margin-bottom: 36px;
+    margin-bottom: 56px;
   }
 
   .contacts__eyebrow {
     margin-bottom: 16px;
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
   .contacts__title {
@@ -166,13 +204,26 @@
     padding: 16px 18px;
   }
 
-  .contact-card__label {
+  /* .contact-card__label {
     font-size: 16px;
-  }
-
+  } */
+/* 
   .contact-card__value {
     font-size: 15px;
-  }
+  } */
+
+  .contact-card__icon {
+  flex: 0 0 54px;
+
+  width: 54px;
+  height: 54px;
+}
+
+.contact-card__icon img {
+  width: 28px;
+  height: 28px;
+}
+
 }
 
 /* FOCUS / ACCESSIBILITY */
