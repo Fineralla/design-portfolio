@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Airpods</title>
 </head>
 
 <body>
@@ -16,57 +16,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>СтартДрайв — проект artistClay</title>
-    <meta name="description" content="Кейс СтартДрайв — дизайн лендинга для автошколы.">
+    <title>StartDrive — проект artistClay</title>
+    <meta name="description" content="Кейс StartDrive — дизайн лендинга для спортивных напитков.">
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="../css/foter.css">
 
     <script src="../index.js" defer></script>
   </head>
 
   <body>
 
-    <!-- HEADER -->
+    <!-- header -->
     <header class="header">
-      <div class="header-inner">
+        <div class="header-inner">
 
-        <a class="logo" href="../index.html">
-          <span class="logo-name">/artistClay</span>
-          <span class="logo-description">UI/UX дизайнер</span>
-        </a>
+            <!-- Логотип -->
+            <a class="logo" href="#top">
+                <span class="logo-name">/artistClay</span>
+                <span class="logo-description">UI/UX дизайнер</span>
+            </a>
 
-        <nav class="desktop-nav" aria-label="Основная навигация">
-          <a href="../index.html#skills">Навыки</a>
-          <a href="../index.html#projects">Проекты</a>
-          <a href="../index.html#contacts">Контакты</a>
-        </nav>
+            <!-- Desktop навигация -->
+            <nav class="desktop-nav" aria-label="Основная навигация">
+                <a href="../index.html#skills">Навыки</a>
+                <a href="../index.html#projects">Проекты</a>
+                <a href="../index.html#qualification">Квалификация</a>
+                <a href="../index.html#contacts">Контакты</a>
+            </nav>
 
-        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="mobile-menu"
-          aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+            <!-- Desktop статус -->
+            <div class="desktop-status">
+                <span class="status-dot"></span>
+                <span>Открыта к предложениям</span>
+            </div>
 
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Мобильная навигация">
-        <div class="mobile-menu-content">
-          <ul class="menu-links">
-            <li><a href="../index.html#skills">Навыки</a></li>
-            <li><a href="../index.html#projects">Проекты</a></li>
-            <li><a href="../index.html#qualification">Квалификация</a></li>
-            <li><a href="../index.html#contacts">Контакты</a></li>
-          </ul>
+            <!-- Mobile бургер -->
+            <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"
+                aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-          <div class="menu-footer">
-            <span class="status-dot"></span>
-            <span>Открыта к предложениям</span>
-          </div>
         </div>
-      </nav>
+        <nav class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+
+                <ul class="menu-links">
+                    <li><a href="#skills">Навыки</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#qualification">Квалификация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+
+                <div class="menu-footer">
+                    <span class="status-dot"></span>
+                    <span>Открыта к предложениям</span>
+                </div>
+
+            </div>
+        </nav>
     </header>
 
     <main class="case-page">
@@ -80,27 +93,33 @@
             <a href="../index.html#projects" class="case-back">
               <span aria-hidden="true">←</span>
               Все проекты
+              <!-- <img class="hero__button-icon" src="../assets/img/arrow-icon.svg" alt="" width="16"
+                                height="16"> -->
             </a>
 
             <h1 class="case-hero__title">СтартДрайв</h1>
 
-            <p class="case-hero__subtitle">
+            <!-- <p class="case-hero__subtitle">
               Landing page для автошколы
-            </p>
+            </p> -->
 
             <p class="case-hero__description">
-              Современный и удобный лендинг,
-              который помогает будущим водителям
-              быстро узнать о курсах и записаться
-              на обучение.
-            </p>
+Разработка дизайн главной страницы автошколы по готовому ТЗ за 7 дней.
+Цель бизнеса: повысить лояльность будущих водителей, закрыть страх скрытых платежей и стимулировать запись на обучение. Сдала проект на день раньше срока.            </p>
 
             <div class="case-tags">
               <span>UI Design</span>
-              <span>Landing page</span>
+              <span>Cross-platform Design</span>
             </div>
 
-            <ul class="case-facts">
+            <a class="hero__button hero__button--primary" target="_blank" href="https://www.figma.com/design/SVLoewUlhiL2sPamDk7Vsz/Start-Drive-TZ?node-id=44-1287&t=hkSzRX9sLwQUm1Me-1">
+                            Перейти в Figma
+                            <img class="hero__button-icon" src="../assets/img/arrow-icon.svg" alt="" width="16"
+                                height="16">
+
+            </a>
+
+            <!-- <ul class="case-facts">
               <li>
                 <span class="case-facts__icon" aria-hidden="true">▣</span>
                 <span><strong>Срок:</strong> 3 дня</span>
@@ -115,12 +134,12 @@
                 <span class="case-facts__icon" aria-hidden="true">♧</span>
                 <span><strong>Аудитория:</strong> будущие водители</span>
               </li>
-            </ul>
+            </ul> -->
           </div>
 
           <!-- Готовый мокап с прозрачностью -->
           <div class="case-hero__visual">
-            <img src="../assets/img/startdrive-mockup.webp" alt="Дизайн СтартДрайв на ноутбуке" width="900" height="700"
+            <img src="../assets/img/projects/startdrive-preview-laptop.png" alt="Дизайн StartDrive на ноутбуке" width="900" height="700"
               fetchpriority="high">
           </div>
         </div>
@@ -135,17 +154,17 @@
           <div class="case-results__grid">
 
             <figure class="case-results__item">
-              <img src="../assets/img/startdrive-hero.webp" alt="Главный экран сайта СтартДрайв" loading="lazy"
+              <img src="../assets/img/projects/startdrive-1.png" alt="" loading="lazy"
                 width="800" height="540">
             </figure>
 
             <figure class="case-results__item">
-              <img src="../assets/img/startdrive-stats.webp" alt="Блок преимуществ автошколы" loading="lazy" width="800"
+              <img src="../assets/img/projects/startdrive-2.png" alt="" loading="lazy" width="800"
                 height="540">
             </figure>
 
             <figure class="case-results__item">
-              <img src="../assets/img/startdrive-instructors.webp" alt="Блок профессиональных инструкторов"
+              <img src="../assets/img/projects/startdrive-3.png" alt=""
                 loading="lazy" width="800" height="540">
             </figure>
 
@@ -154,7 +173,7 @@
       </section>
 
       <!-- SUMMARY -->
-      <section class="case-summary">
+      <!-- <section class="case-summary">
         <div class="case-container">
 
           <div class="case-summary__card">
@@ -170,7 +189,7 @@
           </div>
 
         </div>
-      </section>
+      </section> -->
 
       <!-- BACK LINK -->
       <!-- <div class="case-container case-end">
@@ -178,6 +197,40 @@
     </div> -->
 
     </main>
+        <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__top">
+
+                <!-- Логотип -->
+                <a href="#top" class="footer__logo">
+                    <span class="footer__logo-name">/artistClay</span>
+                    <span class="footer__logo-description">UI/UX дизайнер</span>
+                </a>
+
+                <!-- Навигация -->
+                <nav class="footer__nav" aria-label="Навигация в футере">
+                    <a href="#skills">Навыки</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#qualification">Квалификация</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 artistClay. Все права защищены
+                </p>
+
+                <p class="footer__credit">
+                    Создано с вниманием к деталям
+                    <span aria-hidden="true">✦</span>
+                </p>
+            </div>
+
+        </div>
+    </footer>
 
   </body>
 
