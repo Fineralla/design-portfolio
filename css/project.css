@@ -6,7 +6,59 @@
 .case-page {
   overflow: clip;
   color: var(--text);
-  background: var(--bg);
+  /* background: var(--bg); */
+}
+
+.case-page::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  /* background: */
+  /* право около hero section */
+    /* radial-gradient(
+      ellipse 550px 550px at 70% 35%,
+      rgba(98, 92, 255, 0.3),
+      transparent 75%
+    ) */
+    /* слева от навыков */
+     /* radial-gradient(
+      ellipse 450px 350px at -5% 25%,
+      rgba(98, 92, 255, 0.12),
+      transparent 75%
+    ), */
+    /* слево снизу в проектах */
+    /* radial-gradient(
+      ellipse 500px 400px at 25% 55%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ), */
+    /* справа в проектах */
+    /* radial-gradient(
+      ellipse 500px 400px at 65% 70%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ), */
+    /* посередине в опыте */
+    /* radial-gradient(
+      ellipse 500px 400px at 95% 45%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ), */
+    /* слево от footer */
+    /* radial-gradient(
+      ellipse 450px 350px at 0% 95%,
+      rgba(98, 92, 255, 0.08),
+      transparent 75% )*/
+    ;
+
+  pointer-events: none;
+  z-index: -1;
 }
 
 .case-container {
@@ -22,14 +74,7 @@
 .case-hero {
   position: relative;
   padding: 36px var(--page-padding) 0;
-
-  background:
-    /* radial-gradient(
-      ellipse at 75% 65%,
-      rgba(95, 73, 220, 0.18),
-      transparent 62%
-    ), */
-    var(--bg);
+    /*  var(--bg); */
 }
 
 .case-hero__grid {
@@ -165,17 +210,28 @@
 /* HERO IMAGE */
 
 .case-hero__visual {
+ position: relative;
+  isolation: isolate;
+
   display: flex;
   align-items: end;
   justify-content: center;
 
   min-width: 0;
   width: 100%;
-
-  position: relative;
-  isolation: isolate;
 }
-
+.case-hero__visual::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient( ellipse at center, rgba(98, 92, 255, 0.22), transparent 65% );
+}
 
 .hero__button {
   display: inline-flex;
@@ -261,7 +317,7 @@
 .case-results {
   position: relative;
   padding: 32px var(--page-padding) 0;
-  background: var(--bg);
+  /* background: var(--bg); */
   margin-bottom: 32px;
 }
 
@@ -307,7 +363,7 @@
 
 .case-summary {
   padding: 30px var(--page-padding) 24px;
-  background: var(--bg);
+  /* background: var(--bg); */
 }
 
 .case-summary__card {
@@ -588,3 +644,219 @@
   }
 }
 
+
+/* ==================================
+   PROJECT GALLERY / LIGHTBOX
+================================== */
+
+/* Кликабельные превью */
+
+.case-results__zoom {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.case-results__zoom img {
+  display: block;
+  width: 100%;
+}
+
+/* Окно просмотра */
+
+.project-lightbox {
+  position: fixed;
+  width: calc(100% - 24px);
+  max-width: 1200px;
+  height: calc(100dvh - 32px);
+  max-height: 850px;
+
+  padding: 16px;
+  border: 1px solid #30313e;
+  border-radius: 16px;
+
+  background: #0e0f15;
+  color: #f5f5f7;
+  box-sizing: border-box;
+}
+
+.project-lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+/* Область изображения */
+
+.project-lightbox__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  overflow: hidden;
+}
+
+/* Увеличенное изображение */
+
+.project-lightbox__image {
+  display: block;
+
+  width: 100%;
+  max-width: 1000px;
+  max-height: 100%;
+
+  aspect-ratio: 1.55 / 1;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 16px;
+
+  /* cursor: zoom-in; */
+  transition: transform 0.25s ease;
+}
+
+/* .project-lightbox__image.is-zoomed {
+  transform: scale(1.8);
+  cursor: zoom-out;
+} */
+
+/* Кнопки */
+
+.project-lightbox__close,
+.project-lightbox__prev,
+.project-lightbox__next {
+  position: absolute;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: 1px solid #30313e;
+  border-radius: 10px;
+
+  background: #15161c;
+  color: #f5f5f7;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.project-lightbox__close {
+  top: 16px;
+  right: 16px;
+}
+
+.project-lightbox__prev {
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-lightbox__next {
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-lightbox__counter {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: #a3a4ad;
+  font-size: 13px;
+}
+
+.project-lightbox button:hover {
+  border-color: #625cff;
+}
+
+@media (min-width: 600px) {
+  .project-lightbox {
+    padding: 48px 60px;
+  }
+
+  .project-lightbox__prev {
+    left: 16px;
+  }
+
+  .project-lightbox__next {
+    right: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-lightbox__image {
+    transition: none;
+  }
+}
+
+
+
+
+/* ==================================
+   LIGHTBOX — SLIDE ANIMATION
+================================== */
+
+@keyframes gallery-slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gallery-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Следующая картинка — появляется справа */
+
+.project-lightbox__image.slide-next {
+  animation: gallery-slide-in-right 0.3s ease both;
+}
+
+/* Предыдущая картинка — появляется слева */
+
+.project-lightbox__image.slide-prev {
+  animation: gallery-slide-in-left 0.3s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-lightbox__image.slide-next,
+  .project-lightbox__image.slide-prev {
+    animation: none;
+  }
+}

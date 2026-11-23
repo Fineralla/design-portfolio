@@ -52,3 +52,37 @@ if (header && menuToggle && mobileMenu) {
     }
   });
 }
+
+
+/* ================================
+   BACK TO TOP
+================================ */
+
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+  const updateBackToTop = () => {
+    const isVisible = window.scrollY > 400;
+
+    backToTop.classList.toggle('is-visible', isVisible);
+    backToTop.tabIndex = isVisible ? 0 : -1;
+  };
+
+  window.addEventListener('scroll', updateBackToTop, {
+    passive: true
+  });
+
+  // Проверяем положение страницы при загрузке
+  updateBackToTop();
+
+  backToTop.addEventListener('click', () => {
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: reduceMotion ? 'instant' : 'smooth'
+    });
+  });
+}

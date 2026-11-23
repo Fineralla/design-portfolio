@@ -1,0 +1,52 @@
+
+body::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+  /* право около hero section */
+    radial-gradient(
+      ellipse 450px 350px at 90% 12%,
+      rgba(98, 92, 255, 0.12),
+      transparent 75%
+    ),
+    /* слева от навыков */
+     radial-gradient(
+      ellipse 450px 350px at -5% 25%,
+      rgba(98, 92, 255, 0.12),
+      transparent 75%
+    ),
+    /* слево снизу в проектах */
+    radial-gradient(
+      ellipse 500px 400px at 25% 55%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ),
+    /* справа в проектах */
+    radial-gradient(
+      ellipse 500px 400px at 65% 70%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ),
+    /* посередине в опыте */
+    radial-gradient(
+      ellipse 500px 400px at 95% 45%,
+      rgba(98, 92, 255, 0.10),
+      transparent 75%
+    ),
+    /* слево от footer */
+    radial-gradient(
+      ellipse 450px 350px at 0% 95%,
+      rgba(98, 92, 255, 0.08),
+      transparent 75%
+    );
+
+  pointer-events: none;
+  z-index: -1;
+}

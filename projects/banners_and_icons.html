@@ -24,18 +24,45 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/foter.css">
+        <link rel="stylesheet" href="../css/background-project.css">
 
     <script src="../index.js" defer></script>
   </head>
 
   <body>
+<!-- Просмотр изображений проектов -->
+    <dialog class="project-lightbox" aria-label="Просмотр скриншотов проекта">
 
+      <!-- Закрыть -->
+      <button class="project-lightbox__close" type="button" aria-label="Закрыть">
+        <img src="../assets/img/close-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Предыдущее изображение -->
+      <button class="project-lightbox__prev" type="button" aria-label="Предыдущее изображение">
+        <img src="../assets/img/arrow-left-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Область для увеличенного изображения -->
+      <div class="project-lightbox__stage">
+        <img class="project-lightbox__image" src="" alt="">
+      </div>
+
+      <!-- Следующее изображение -->
+      <button class="project-lightbox__next" type="button" aria-label="Следующее изображение">
+        <img src="../assets/img/arrow-right-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Счётчик изображений -->
+      <span class="project-lightbox__counter"></span>
+
+    </dialog>
     <!-- header -->
     <header class="header">
         <div class="header-inner">
 
             <!-- Логотип -->
-            <a class="logo" href="#top">
+            <a class="logo" href="../index.html">
                 <span class="logo-name">/artistClay</span>
                 <span class="logo-description">UI/UX дизайнер</span>
             </a>
@@ -67,10 +94,10 @@
             <div class="mobile-menu-content">
 
                 <ul class="menu-links">
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#qualification">Квалификация</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="../index.html#skills">Навыки</a></li>
+                    <li><a href="../index.html#projects">Проекты</a></li>
+                    <li><a href="../index.html#qualification">Квалификация</a></li>
+                    <li><a href="../index.html#contacts">Контакты</a></li>
                 </ul>
 
                 <div class="menu-footer">
@@ -113,7 +140,7 @@
 
             <a class="hero__button hero__button--primary" target="_blank" href="https://www.figma.com/design/NEaWM8bCy9B22rygCmrRac/Banners-and-icons?node-id=0-1&t=QA63YRNZE4GK4mTc-1">
                             Перейти в Figma
-                            <img class="hero__button-icon" src="../assets/img/arrow-icon.svg" alt="" width="16"
+                            <img class="hero__button-icon" src="../assets/img/arrow-right-icon.svg" alt="" width="16"
                                 height="16">
 
             </a>
@@ -153,22 +180,30 @@
           <div class="case-results__grid">
 
             <figure class="case-results__item">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
               <img src="../assets/img/projects/banners and icons/1.png" alt="" loading="lazy"
                 width="800" height="540">
+                 </button>
             </figure>
 
             <figure class="case-results__item">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
               <img src="../assets/img/projects/banners and icons/2.png" alt="" loading="lazy" width="800"
                 height="540">
+                 </button>
             </figure>
 
             <figure class="case-results__item">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
               <img src="../assets/img/projects/banners and icons/3.png" alt=""
                 loading="lazy" width="800" height="540">
+                 </button>
             </figure>
             <figure class="case-results__item">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
               <img src="../assets/img/projects/banners and icons/previoev.png" alt=""
                 loading="lazy" width="800" height="540">
+                 </button>
             </figure>
 
           </div>
@@ -213,10 +248,10 @@
 
                 <!-- Навигация -->
                 <nav class="footer__nav" aria-label="Навигация в футере">
-                    <a href="#skills">Навыки</a>
-                    <a href="#projects">Проекты</a>
-                    <a href="#qualification">Квалификация</a>
-                    <a href="#contacts">Контакты</a>
+                    <a href="../index.html#skills">Навыки</a>
+                <a href="../index.html#projects">Проекты</a>
+                <a href="../index.html#qualification">Квалификация</a>
+                <a href="../index.html#contacts">Контакты</a>
                 </nav>
 
             </div>
@@ -228,13 +263,13 @@
 
                 <p class="footer__credit">
                     Создано с вниманием к деталям
-                    <span aria-hidden="true">✦</span>
+                    <img src="../assets/img/hearth-icon.svg" alt="" width="12" height="12">
                 </p>
             </div>
 
         </div>
     </footer>
-
+    <script src="../project-gallery.js" defer></script>
   </body>
 
   </html>

@@ -24,62 +24,92 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" href="../css/foter.css">
+    <link rel="stylesheet" href="../css/background-project.css">
 
     <script src="../index.js" defer></script>
   </head>
 
   <body>
 
+    <!-- Просмотр изображений проектов -->
+    <dialog class="project-lightbox" aria-label="Просмотр скриншотов проекта">
+
+      <!-- Закрыть -->
+      <button class="project-lightbox__close" type="button" aria-label="Закрыть">
+        <img src="../assets/img/close-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Предыдущее изображение -->
+      <button class="project-lightbox__prev" type="button" aria-label="Предыдущее изображение">
+        <img src="../assets/img/arrow-left-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Область для увеличенного изображения -->
+      <div class="project-lightbox__stage">
+        <img class="project-lightbox__image" src="" alt="">
+      </div>
+
+      <!-- Следующее изображение -->
+      <button class="project-lightbox__next" type="button" aria-label="Следующее изображение">
+        <img src="../assets/img/arrow-right-icon.svg" alt="" width="16" height="16">
+      </button>
+
+      <!-- Счётчик изображений -->
+      <span class="project-lightbox__counter"></span>
+
+    </dialog>
+
+
     <!-- header -->
     <header class="header">
-        <div class="header-inner">
+      <div class="header-inner">
 
-            <!-- Логотип -->
-            <a class="logo" href="#top">
-                <span class="logo-name">/artistClay</span>
-                <span class="logo-description">UI/UX дизайнер</span>
-            </a>
+        <!-- Логотип -->
+        <a class="logo" href="../index.html">
+          <span class="logo-name">/artistClay</span>
+          <span class="logo-description">UI/UX дизайнер</span>
+        </a>
 
-            <!-- Desktop навигация -->
-            <nav class="desktop-nav" aria-label="Основная навигация">
-                <a href="../index.html#skills">Навыки</a>
-                <a href="../index.html#projects">Проекты</a>
-                <a href="../index.html#qualification">Квалификация</a>
-                <a href="../index.html#contacts">Контакты</a>
-            </nav>
+        <!-- Desktop навигация -->
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="../index.html#skills">Навыки</a>
+          <a href="../index.html#projects">Проекты</a>
+          <a href="../index.html#qualification">Квалификация</a>
+          <a href="../index.html#contacts">Контакты</a>
+        </nav>
 
-            <!-- Desktop статус -->
-            <div class="desktop-status">
-                <span class="status-dot"></span>
-                <span>Открыта к предложениям</span>
-            </div>
+        <!-- Desktop статус -->
+        <div class="desktop-status">
+          <span class="status-dot"></span>
+          <span>Открыта к предложениям</span>
+        </div>
 
-            <!-- Mobile бургер -->
-            <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"
-                aria-label="Открыть меню">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <!-- Mobile бургер -->
+        <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false"
+          aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+      <nav class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+
+          <ul class="menu-links">
+            <li><a href="../index.html#skills">Навыки</a></li>
+            <li><a href="../index.html#projects">Проекты</a></li>
+            <li><a href="../index.html#qualification">Квалификация</a></li>
+            <li><a href="../index.html#contacts">Контакты</a></li>
+          </ul>
+
+          <div class="menu-footer">
+            <span class="status-dot"></span>
+            <span>Открыта к предложениям</span>
+          </div>
 
         </div>
-        <nav class="mobile-menu" id="mobile-menu">
-            <div class="mobile-menu-content">
-
-                <ul class="menu-links">
-                    <li><a href="#skills">Навыки</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#qualification">Квалификация</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-
-                <div class="menu-footer">
-                    <span class="status-dot"></span>
-                    <span>Открыта к предложениям</span>
-                </div>
-
-            </div>
-        </nav>
+      </nav>
     </header>
 
     <main class="case-page">
@@ -104,7 +134,9 @@
             </p> -->
 
             <p class="case-hero__description">
-              Это учебный проект, где главная цель — показать один и тот же продукт (AirPods) совершенно по-разному, в зависимости от того, где его увидят. Было сделано 6 вариантов дизайна, которые органично смотрелись бы и на большом десктопном экране, и в презентации, и в маленьких карточках на маркетплейсах.
+              Это учебный проект, где главная цель — показать один и тот же продукт (AirPods) совершенно по-разному, в
+              зависимости от того, где его увидят. Было сделано 6 вариантов дизайна, которые органично смотрелись бы и
+              на большом десктопном экране, и в презентации, и в маленьких карточках на маркетплейсах.
             </p>
 
             <div class="case-tags">
@@ -112,10 +144,10 @@
               <span>Cross-platform Design</span>
             </div>
 
-            <a class="hero__button hero__button--primary" target="_blank" href="https://www.figma.com/design/tsJq2ydrVprFewW8Tl6FDw/AirPods?node-id=3-2&t=b3Z053vpH9qLtoYR-1">
-                            Перейти в Figma
-                            <img class="hero__button-icon" src="../assets/img/arrow-icon.svg" alt="" width="16"
-                                height="16">
+            <a class="hero__button hero__button--primary" target="_blank"
+              href="https://www.figma.com/design/tsJq2ydrVprFewW8Tl6FDw/AirPods?node-id=3-2&t=b3Z053vpH9qLtoYR-1">
+              Перейти в Figma
+              <img class="hero__button-icon" src="../assets/img/arrow-right-icon.svg" alt="" width="16" height="16">
 
             </a>
 
@@ -139,8 +171,8 @@
 
           <!-- Готовый мокап с прозрачностью -->
           <div class="case-hero__visual">
-            <img src="../assets/img/projects/airpods-preview-laptop.png" alt="Дизайн Airpods на ноутбуке" width="900" height="700"
-              fetchpriority="high">
+            <img src="../assets/img/projects/airpods-preview-laptop.png" alt="Дизайн Airpods на ноутбуке" width="900"
+              height="700" fetchpriority="high">
           </div>
         </div>
       </section>
@@ -154,18 +186,21 @@
           <div class="case-results__grid">
 
             <figure class="case-results__item">
-              <img src="../assets/img/projects/airpods-1.png" alt="" loading="lazy"
-                width="800" height="540">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
+                <img src="../assets/img/projects/airpods-1.png" alt="" loading="lazy" width="800" height="540">
+              </button>
             </figure>
 
             <figure class="case-results__item">
-              <img src="../assets/img/projects/airpods-2.png" alt="" loading="lazy" width="800"
-                height="540">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
+                <img src="../assets/img/projects/airpods-2.png" alt="" loading="lazy" width="800" height="540">
+              </button>
             </figure>
 
             <figure class="case-results__item">
-              <img src="../assets/img/projects/airpods-3.png" alt=""
-                loading="lazy" width="800" height="540">
+              <button class="case-results__zoom" type="button" aria-label="Увеличить первый скриншот">
+                <img src="../assets/img/projects/airpods-3.png" alt="" loading="lazy" width="800" height="540">
+              </button>
             </figure>
 
           </div>
@@ -197,41 +232,41 @@
     </div> -->
 
     </main>
-        <footer class="footer">
-        <div class="footer__container">
+    <footer class="footer">
+      <div class="footer__container">
 
-            <div class="footer__top">
+        <div class="footer__top">
 
-                <!-- Логотип -->
-                <a href="#top" class="footer__logo">
-                    <span class="footer__logo-name">/artistClay</span>
-                    <span class="footer__logo-description">UI/UX дизайнер</span>
-                </a>
+          <!-- Логотип -->
+          <a href="#top" class="footer__logo">
+            <span class="footer__logo-name">/artistClay</span>
+            <span class="footer__logo-description">UI/UX дизайнер</span>
+          </a>
 
-                <!-- Навигация -->
-                <nav class="footer__nav" aria-label="Навигация в футере">
-                    <a href="#skills">Навыки</a>
-                    <a href="#projects">Проекты</a>
-                    <a href="#qualification">Квалификация</a>
-                    <a href="#contacts">Контакты</a>
-                </nav>
-
-            </div>
-
-            <div class="footer__bottom">
-                <p class="footer__copyright">
-                    © 2026 artistClay. Все права защищены
-                </p>
-
-                <p class="footer__credit">
-                    Создано с вниманием к деталям
-                    <span aria-hidden="true">✦</span>
-                </p>
-            </div>
+          <!-- Навигация -->
+          <nav class="footer__nav" aria-label="Навигация в футере">
+            <a href="../index.html#skills">Навыки</a>
+            <a href="../index.html#projects">Проекты</a>
+            <a href="../index.html#qualification">Квалификация</a>
+            <a href="../index.html#contacts">Контакты</a>
+          </nav>
 
         </div>
-    </footer>
 
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            © 2026 artistClay. Все права защищены
+          </p>
+
+          <p class="footer__credit">
+            Создано с вниманием к деталям
+            <img src="../assets/img/hearth-icon.svg" alt="" width="12" height="12">
+          </p>
+        </div>
+
+      </div>
+    </footer>
+    <script src="../project-gallery.js" defer></script>
   </body>
 
   </html>

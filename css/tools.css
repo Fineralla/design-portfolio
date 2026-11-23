@@ -6,7 +6,7 @@
 .tools {
   position: relative;
   padding: 40px var(--page-padding) 48px;
-  background: var(--bg);
+  /* background: var(--bg); */
 }
 
 .tools__container {

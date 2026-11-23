@@ -6,13 +6,13 @@
 .projects {
   position: relative;
   padding: 48px var(--page-padding) 56px;
-  background:
+  /* background: */
     /* radial-gradient(
       ellipse at 100% 60%,
       rgba(98, 92, 255, 0.1),
       transparent 55%
     ), */
-    var(--bg);
+    /* var(--bg); */
 }
 
 .projects__container {
@@ -112,6 +112,15 @@
     border-color 0.2s ease,
     transform 0.2s ease;
 }
+
+
+.project-card__link img {
+    display: block;
+    width: 8px;
+    height: 8px;
+    object-fit: contain;
+}
+
 
 .project-card__clickable {
   display: block;
@@ -254,6 +263,10 @@
   .project-card__title {
     font-size: 15px;
   }
+  .project-card__link img {
+    width: 12px;
+    height: 12px;
+}
 }
 
 /* ==================================
