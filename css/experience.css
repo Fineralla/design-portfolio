@@ -6,13 +6,13 @@
     position: relative;
     padding: 48px var(--page-padding) 56px;
     /* background: */
-        /* radial-gradient(ellipse at 0% 55%,
+    /* radial-gradient(ellipse at 0% 55%,
             rgba(98, 92, 255, 0.08),
             transparent 45%),
         radial-gradient(ellipse at 100% 80%,
             rgba(98, 92, 255, 0.08),
             transparent 45%), */
-        /* var(--bg); */
+    /* var(--bg); */
 }
 
 .experience__container {
@@ -178,7 +178,7 @@
 
 .experience-card__button {
     border-color: #5c57dc;
-    
+
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease;
@@ -186,7 +186,7 @@
 
 
 .experience-card__button img {
-        display: block;
+    display: block;
     width: 10px;
     height: 10px;
     flex-shrink: 0;
@@ -257,10 +257,10 @@
 
     .experience-card__button img {
 
-    width: 12px;
-    height: 12px;
+        width: 12px;
+        height: 12px;
 
-}
+    }
 
     .experience__timeline {
         position: relative;
@@ -272,22 +272,21 @@
     }
 
     .experience__timeline::before {
-       content: "";
-  position: absolute;
+        content: "";
+        position: absolute;
 
-  top: 10px;
-  bottom: 10px;
-  left: 30%;
+        top: 10px;
+        bottom: 10px;
+        left: 30%;
 
-  width: 2px;
+        width: 2px;
 
-  background: linear-gradient(
-    to bottom,
-    #a7a4d800 0%,
-    #a7a4d8 10%,
-    #a7a4d8 50%,
-    #6862ff 70%,
-    #6762ff00 100%)
+        background: linear-gradient(to bottom,
+                #a7a4d800 0%,
+                #a7a4d8 10%,
+                #a7a4d8 50%,
+                #6862ff 70%,
+                #6762ff00 100%)
     }
 
     .experience-item {
@@ -299,20 +298,20 @@
 
     .experience-item__year {
         position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
 
-  margin: 0;
-  padding: 0 40px 0 0;
+        margin: 0;
+        padding: 0 40px 0 0;
 
-  border: none;
-  background: transparent;
+        border: none;
+        background: transparent;
 
-  color: #a7a4d8;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1;
+        color: #a7a4d8;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
     }
 
     .experience-item__year::after {
